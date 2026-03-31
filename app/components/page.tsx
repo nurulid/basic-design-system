@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
+import { Textarea } from "@/components/ui/Textarea";
 
 export default function ComponentsPage() {
   return (
@@ -33,6 +34,18 @@ export default function ComponentsPage() {
             type="password"
             error="Password must be at least 8 characters."
             defaultValue="123"
+          />
+        </div>
+      </div>
+
+      <p>Textarea</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-6">
+          <Textarea label="Message" placeholder="Type your message here..." />
+          <Textarea
+            label="Bio"
+            error="Bio is too long."
+            defaultValue="This is a very long bio that exceeds the maximum character limit..."
           />
         </div>
       </div>
