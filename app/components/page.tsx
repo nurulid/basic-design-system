@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/Button";
+import { Checkbox, CheckboxGroup } from "@/components/ui/Checkbox";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
 
@@ -49,6 +50,13 @@ export default function ComponentsPage() {
           />
         </div>
       </div>
+
+      <p>Checkbox</p>
+      <CheckboxGroup legend="Options">
+        <Checkbox id="c1" label="Accept terms and conditions" />
+        <Checkbox id="c2" label="Subscribe to newsletter" defaultChecked />
+        <Checkbox id="c3" label="Disabled option" disabled />
+      </CheckboxGroup>
     </>
   );
 }
