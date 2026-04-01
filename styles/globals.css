@@ -91,10 +91,11 @@
   .page-shell::before {
     content: "";
     position: fixed;
-    inset: 20px;
     border: 1px solid color-mix(in oklab, var(--color-system-border) 65%, white);
     border-radius: 26px;
     pointer-events: none;
     z-index: -1;
+
+    @apply inset-1 sm:inset-5;
   }
 }
