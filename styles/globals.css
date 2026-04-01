@@ -18,8 +18,8 @@
   --color-brand-success: var(--brand-success);
   --color-brand-error-muted: var(--brand-error-muted);
 
-  --shadow-diffuse: 0 8px 30px rgba(0, 0, 0, 0.04);
-  --shadow-diffuse-hover: 0 12px 40px rgba(0, 0, 0, 0.08);
+  --shadow-diffuse: 0 10px 30px rgba(24, 24, 28, 0.01);
+  --shadow-diffuse-hover: 0 18px 45px rgba(24, 24, 28, 0.3);
 
   --animate-progress-indeterminate: progress-indeterminate 1.5s infinite linear;
   --animate-gradient-x: gradient-x 4s ease infinite;
@@ -30,20 +30,20 @@
 
 @layer base {
   :root {
-    --system-base: #f9f9f9; /* Bone / Off-White */
-    --system-card: #ffffff;
-    --system-border: #eaeaea;
-    --system-error: #ff6b6b; /* Soft Red */
-    --system-success: #8ab800; /* Acid Green */
-    --system-info: #111111; /* Dark for primary actions */
-    --system-warning: #f5a623;
-    --system-text: #555555;
-    --system-heading: #111111;
-    --system-comment: #999999;
-    --system-soft: #f0f0f0;
-    --text-ghost: #999999;
-    --brand-success: #8ab800;
-    --brand-error-muted: #ffb3b3;
+    --system-base: #f3f3f2;
+    --system-card: #fcfcfb;
+    --system-border: #dededb;
+    --system-error: #dc3c2b;
+    --system-success: #2f9e67;
+    --system-info: #2a2a2f;
+    --system-warning: #ff5a1f;
+    --system-text: #5f5f5c;
+    --system-heading: #2f2f2d;
+    --system-comment: #9a9a96;
+    --system-soft: #ececea;
+    --text-ghost: #a1a19e;
+    --brand-success: #2f9e67;
+    --brand-error-muted: #f4b8b1;
   }
 
   .dark {
@@ -64,8 +64,14 @@
   }
 
   body {
+    font-feature-settings: "ss01" 1, "cv10" 1;
     background-color: var(--color-system-base);
     color: var(--color-system-text);
+    background-image: radial-gradient(
+      circle at 50% -10%,
+      rgba(255, 255, 255, 0.85),
+      transparent 50%
+    );
   }
   h1,
   h2,
@@ -74,6 +80,21 @@
   h5,
   h6 {
     color: var(--color-system-heading);
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
+  }
+
+  .page-shell {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .page-shell::before {
+    content: "";
+    position: fixed;
+    inset: 20px;
+    border: 1px solid color-mix(in oklab, var(--color-system-border) 65%, white);
+    border-radius: 26px;
+    pointer-events: none;
+    z-index: -1;
   }
 }
