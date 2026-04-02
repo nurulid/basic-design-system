@@ -8,20 +8,20 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-system-info text-system-card border border-transparent hover:brightness-110 shadow-[var(--shadow-diffuse)]",
+          "bg-system-info text-system-card border border-transparent hover:brightness-110 shadow-[--shadow-diffuse]",
         secondary:
-          "bg-system-card text-system-text hover:text-system-heading border border-system-border hover:bg-white shadow-[var(--shadow-diffuse)]",
+          "bg-system-card text-system-text hover:text-system-heading border border-system-border hover:bg-white shadow-[--shadow-diffuse]",
         ghost:
           "hover:bg-system-soft text-system-text hover:text-system-heading",
         outline:
-          "border border-system-border bg-system-card hover:bg-system-soft text-system-text hover:text-system-heading shadow-[var(--shadow-diffuse)]",
+          "border border-system-border bg-system-card hover:bg-system-soft text-system-text hover:text-system-heading shadow-[--shadow-diffuse]",
         destructive:
-          "bg-system-error/10 text-system-error border border-system-error/20 hover:bg-system-error/20 shadow-[var(--shadow-diffuse)]",
+          "bg-system-error/10 text-system-error border border-system-error/20 hover:bg-system-error/20 shadow-[--shadow-diffuse]",
         success:
-          "bg-system-success/10 text-system-success border border-system-success/20 hover:bg-system-success/20 shadow-[var(--shadow-diffuse)]",
-        info: "bg-system-info/10 text-system-info border border-system-info/20 hover:bg-system-info/20 shadow-[var(--shadow-diffuse)]",
+          "bg-system-success/10 text-system-success border border-system-success/20 hover:bg-system-success/20 shadow-[--shadow-diffuse]",
+        info: "bg-system-info/10 text-system-info border border-system-info/20 hover:bg-system-info/20 shadow-[--shadow-diffuse]",
         warning:
-          "bg-system-warning/10 text-system-warning border border-system-warning/20 hover:bg-system-warning/20 shadow-[var(--shadow-diffuse)]",
+          "bg-system-warning/10 text-system-warning border border-system-warning/20 hover:bg-system-warning/20 shadow-[--shadow-diffuse]",
       },
       size: {
         default: "h-10 px-5 py-2",

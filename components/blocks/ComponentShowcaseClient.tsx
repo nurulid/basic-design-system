@@ -19,9 +19,7 @@ export function ComponentShowcaseClient({
 }) {
   return (
     <div className="space-y-4">
-      <h3 className="text-lg font-semibold text-system-heading">
-        {name}
-      </h3>
+      <h3 className="text-lg font-semibold text-system-heading">{name}</h3>
 
       <Tabs defaultValue="preview" className="w-full">
         <TabsList className="grid w-full grid-cols-3 max-w-[400px]">
@@ -32,7 +30,7 @@ export function ComponentShowcaseClient({
 
         <TabsContent
           value="preview"
-          className="mt-4 p-8 bg-system-card rounded-3xl shadow-[var(--shadow-diffuse)] border border-system-border"
+          className="mt-4 p-8 bg-system-card rounded-3xl shadow-[--shadow-diffuse] border border-system-border"
         >
           {children}
         </TabsContent>

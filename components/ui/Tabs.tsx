@@ -97,7 +97,7 @@ export const TabsTrigger = React.forwardRef<
       onClick={() => onValueChange(value)}
       className={cn(
         "inline-flex items-center justify-center whitespace-nowrap rounded-xl px-3.5 py-1.5 text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-system-info disabled:pointer-events-none disabled:opacity-50",
-        "data-[state=active]:bg-system-card data-[state=active]:text-system-heading data-[state=active]:shadow-[var(--shadow-diffuse)] data-[state=active]:border data-[state=active]:border-system-border",
+        "data-[state=active]:bg-system-card data-[state=active]:text-system-heading data-[state=active]:shadow-[--shadow-diffuse] data-[state=active]:border data-[state=active]:border-system-border",
         className,
       )}
       {...props}
