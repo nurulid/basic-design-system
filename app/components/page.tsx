@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { Checkbox, CheckboxGroup } from "@/components/ui/Checkbox";
 import { Input } from "@/components/ui/Input";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs";
 import { Textarea } from "@/components/ui/Textarea";
 
 export default function ComponentsPage() {
@@ -57,6 +58,36 @@ export default function ComponentsPage() {
         <Checkbox id="c2" label="Subscribe to newsletter" defaultChecked />
         <Checkbox id="c3" label="Disabled option" disabled />
       </CheckboxGroup>
+
+      <p>Tabs</p>
+      <Tabs defaultValue="account" className="w-100">
+        <TabsList className="grid w-full grid-cols-2">
+          <TabsTrigger value="account">Account</TabsTrigger>
+          <TabsTrigger value="password">Password</TabsTrigger>
+        </TabsList>
+        <TabsContent
+          value="account"
+          className="p-4 bg-system-soft rounded-sm border border-system-border mt-4"
+        >
+          <h4 className="text-sm font-medium mb-2 text-system-heading">
+            Account Settings
+          </h4>
+          <p className="text-sm text-system-text">
+            Make changes to your account here. Click save when you&apos;re done.
+          </p>
+        </TabsContent>
+        <TabsContent
+          value="password"
+          className="p-4 bg-system-soft rounded-sm border border-system-border mt-4"
+        >
+          <h4 className="text-sm font-medium mb-2 text-system-heading">
+            Password Settings
+          </h4>
+          <p className="text-sm text-system-text">
+            Change your password here. After saving, you&apos;ll be logged out.
+          </p>
+        </TabsContent>
+      </Tabs>
     </>
   );
 }
