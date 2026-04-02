@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
 const navigationItems = [
-  { label: "Components", href: "/components" },
+  { label: "Components", href: "/components/ui" },
   { label: "Design Tokens", href: "/design-tokens" },
   { label: "Guidelines", href: "/guidelines" },
 ];
@@ -24,9 +24,9 @@ export function Navigation() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-system-border/80 bg-system-base/85 backdrop-blur-md">
       <div className="container mx-auto flex h-[4.5rem] max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <span className="text-lg font-semibold tracking-tight text-system-heading">
-          System Logic
-        </span>
+        <Link href="/" className="text-lg font-semibold tracking-tight text-system-heading">
+          BDS
+        </Link>
 
         <nav
           aria-label="Main navigation"
