@@ -2,21 +2,24 @@ import { ComponentShowcase } from "@/components/blocks/ComponentShowcase";
 import { Tabs, TabsTrigger, TabsContent, TabsList } from "@/components/ui/Tabs";
 import * as UsageCodesUI from "@/components/examples/UsageCodesUI";
 import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Textarea } from "@/components/ui/Textarea";
+import { Checkbox, CheckboxGroup } from "@/components/ui/Checkbox";
+import { Radio, RadioGroup } from "@/components/ui/Radio";
 
 export default function Page() {
   return (
     <>
-      <section className="space-y-4">
-        <h1 className="text-4xl font-semibold tracking-tight text-system-heading sm:text-5xl">
-          System Logic
-        </h1>
-        <p className="text-lg text-system-text max-w-2xl">
-          A design system UI library featuring a tiered dark palette, semantic
-          glow states, and intentional visual hierarchy.
-        </p>
-      </section>
+      <section id="ui-components" className="space-y-12">
+        <div className="border-b border-system-border pb-4">
+          <h2 className="text-2xl font-semibold tracking-tight font-serif text-system-heading">
+            UI Components
+          </h2>
+          <p className="text-system-comment mt-2">
+            Core building blocks for creating user interfaces.
+          </p>
+        </div>
 
-      <section id="ui-components" className="space-y-12 scroll-mt-24">
         <ComponentShowcase
           name="Buttons"
           componentName="Button"
@@ -35,6 +38,72 @@ export default function Page() {
               Disabled
             </Button>
           </div>
+        </ComponentShowcase>
+
+        <ComponentShowcase
+          name="Input Fields"
+          componentName="Input"
+          usageCode={UsageCodesUI.inputUsage}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-6">
+              <Input
+                label="Email address"
+                type="email"
+                placeholder="name@example.com"
+              />
+              <Input
+                label="Password"
+                type="password"
+                error="Password must be at least 8 characters."
+                defaultValue="123"
+              />
+            </div>
+          </div>
+        </ComponentShowcase>
+
+        <ComponentShowcase
+          name="Textarea"
+          componentName="Textarea"
+          usageCode={UsageCodesUI.textareaUsage}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-6">
+              <Textarea
+                label="Message"
+                placeholder="Type your message here..."
+              />
+              <Textarea
+                label="Bio"
+                error="Bio is too long."
+                defaultValue="This is a very long bio that exceeds the maximum character limit..."
+              />
+            </div>
+          </div>
+        </ComponentShowcase>
+
+        <ComponentShowcase
+          name="Checkbox"
+          componentName="Checkbox"
+          usageCode={UsageCodesUI.checkboxUsage}
+        >
+          <CheckboxGroup legend="Options">
+            <Checkbox id="c1" label="Accept terms and conditions" />
+            <Checkbox id="c2" label="Subscribe to newsletter" defaultChecked />
+            <Checkbox id="c3" label="Disabled option" disabled />
+          </CheckboxGroup>
+        </ComponentShowcase>
+
+        <ComponentShowcase
+          name="Radio"
+          componentName="Radio"
+          usageCode={UsageCodesUI.radioUsage}
+        >
+          <RadioGroup defaultValue="r1" legend="Choices">
+            <Radio id="r1" value="r1" label="Default option" />
+            <Radio id="r2" value="r2" label="Secondary option" />
+            <Radio id="r3" value="r3" label="Disabled option" disabled />
+          </RadioGroup>
         </ComponentShowcase>
 
         <ComponentShowcase

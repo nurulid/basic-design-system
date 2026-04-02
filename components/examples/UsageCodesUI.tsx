@@ -15,6 +15,60 @@ export default function App() {
   );
 }`;
 
+export const inputUsage = `import { Input } from "@/components/ui/Input";
+
+export default function App() {
+  return (
+    <div className="space-y-4">
+      <Input
+        label="Email address"
+        type="email"
+        placeholder="name@example.com"
+      />
+      <Input
+        label="Password"
+        type="password"
+        error="Password must be at least 8 characters."
+      />
+    </div>
+  );
+}`;
+
+export const textareaUsage = `import { Textarea } from "@/components/ui/Textarea";
+
+export default function App() {
+  return (
+    <Textarea
+      label="Message"
+      placeholder="Type your message here..."
+    />
+  );
+}`;
+
+export const checkboxUsage = `import { Checkbox, CheckboxGroup } from "@/components/ui/Checkbox";
+
+export default function App() {
+  return (
+    <CheckboxGroup legend="Options">
+      <Checkbox id="c1" label="Accept terms and conditions" />
+      <Checkbox id="c2" label="Subscribe to newsletter" defaultChecked />
+      <Checkbox id="c3" label="Disabled option" disabled />
+    </CheckboxGroup>
+  );
+}`;
+
+export const radioUsage = `import { Radio, RadioGroup } from "@/components/ui/Radio";
+
+export default function App() {
+  return (
+    <RadioGroup defaultValue="r1" legend="Choices">
+      <Radio id="r1" value="r1" label="Default option" />
+      <Radio id="r2" value="r2" label="Secondary option" />
+      <Radio id="r3" value="r3" label="Disabled option" disabled />
+    </RadioGroup>
+  );
+}`;
+
 export const tabsUsage = `import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/Tabs";
 
 export default function App() {

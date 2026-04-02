@@ -32,7 +32,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         {error && (
           <p
             id={errorId}
-            className="mt-1.5 text-xs font-sans text-system-error"
+            className="mt-.5 text-xs font-sans text-system-error"
           >
             {error}
           </p>
