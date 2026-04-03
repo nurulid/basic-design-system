@@ -6,6 +6,14 @@ import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
 import { Checkbox, CheckboxGroup } from "@/components/ui/Checkbox";
 import { Radio, RadioGroup } from "@/components/ui/Radio";
+import { Switch } from "@/components/ui/Switch";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/Select";
 
 export default function Page() {
   return (
@@ -104,6 +112,59 @@ export default function Page() {
             <Radio id="r2" value="r2" label="Secondary option" />
             <Radio id="r3" value="r3" label="Disabled option" disabled />
           </RadioGroup>
+        </ComponentShowcase>
+
+        <ComponentShowcase
+          name="Switch"
+          componentName="Switch"
+          usageCode={UsageCodesUI.switchUsage}
+        >
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <Switch id="s1" defaultChecked />
+              <label
+                htmlFor="s1"
+                className="text-sm font-medium leading-none text-system-heading cursor-pointer"
+              >
+                Enable notifications
+              </label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Switch id="s2" />
+              <label
+                htmlFor="s2"
+                className="text-sm font-medium leading-none text-system-heading cursor-pointer"
+              >
+                Dark mode
+              </label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Switch id="s3" disabled />
+              <label
+                htmlFor="s3"
+                className="text-sm font-medium leading-none text-system-heading opacity-70 cursor-not-allowed"
+              >
+                Disabled switch
+              </label>
+            </div>
+          </div>
+        </ComponentShowcase>
+
+        <ComponentShowcase
+          name="Select"
+          componentName="Select"
+          usageCode={UsageCodesUI.selectUsage}
+        >
+          <Select>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Theme" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="light">Light</SelectItem>
+              <SelectItem value="dark">Dark</SelectItem>
+              <SelectItem value="system">System</SelectItem>
+            </SelectContent>
+          </Select>
         </ComponentShowcase>
 
         <ComponentShowcase

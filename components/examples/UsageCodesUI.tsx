@@ -69,6 +69,36 @@ export default function App() {
   );
 }`;
 
+export const switchUsage = `import { Switch } from "@/components/ui/Switch";
+
+export default function App() {
+  return (
+    <div className="flex items-center space-x-2">
+      <Switch id="s1" defaultChecked />
+      <label htmlFor="s1" className="text-sm font-medium leading-none cursor-pointer">
+        Enable notifications
+      </label>
+    </div>
+  );
+}`;
+
+export const selectUsage = `import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/Select";
+
+export default function App() {
+  return (
+    <Select>
+      <SelectTrigger className="w-[180px]">
+        <SelectValue placeholder="Theme" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value="light">Light</SelectItem>
+        <SelectItem value="dark">Dark</SelectItem>
+        <SelectItem value="system">System</SelectItem>
+      </SelectContent>
+    </Select>
+  );
+}`;
+
 export const tabsUsage = `import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/Tabs";
 
 export default function App() {
@@ -85,5 +115,27 @@ export default function App() {
         Password settings here.
       </TabsContent>
     </Tabs>
+  );
+}`;
+
+export const collapsibleSidebarUsage = `'use client';
+
+import { Bot, MessageSquare, FolderKanban, Compass, Settings } from "lucide-react";
+import { CollapsibleSidebar } from "@/components/ui/CollapsibleSidebar";
+
+const items = [
+  { id: "assistant", label: "Assistant", icon: <Bot className="h-4 w-4" /> },
+  { id: "conversations", label: "Conversations", icon: <MessageSquare className="h-4 w-4" /> },
+  { id: "projects", label: "Projects", icon: <FolderKanban className="h-4 w-4" /> },
+  { id: "explore", label: "Explore", icon: <Compass className="h-4 w-4" /> },
+  { id: "settings", label: "Settings", icon: <Settings className="h-4 w-4" /> },
+];
+
+export default function App() {
+  return (
+    <CollapsibleSidebar
+      title="AI Workspace"
+      items={items}
+    />
   );
 }`;
