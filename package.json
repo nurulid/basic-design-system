@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "cloudflare-next-build && wrangler deploy"
+    "build:cf": "npx @opennextjs/cloudflare build"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
