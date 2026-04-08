@@ -1,49 +1,33 @@
-import * as fs from 'fs';
-import * as path from 'path';
-import { ComponentShowcaseClient } from './ComponentShowcaseClient';
+import { ComponentShowcaseClient } from "./ComponentShowcaseClient";
+import { getComponentSource } from "@/lib/component-source";
 
-function findComponentFile(componentName: string): string | null {
-  const componentsDir = path.join(process.cwd(), 'components');
-  const subdirs = ['ui', 'ai', 'blocks', 'examples'];
-  
-  for (const subdir of subdirs) {
-    const filePath = path.join(componentsDir, subdir, `${componentName}.tsx`);
-    if (fs.existsSync(filePath)) {
-      return filePath;
-    }
-  }
-  return null;
+function getFallbackSourceCode(componentName: string) {
+  return `// Source code preview is unavailable in the Edge runtime build for ${componentName}.
+// Pass a sourceCode prop to <ComponentShowcase /> if you want to show the component source here.`;
 }
 
-export function ComponentShowcase({ 
-  name, 
+export function ComponentShowcase({
+  name,
   componentName,
-  children, 
-  usageCode 
-}: { 
-  name: string, 
-  componentName: string,
-  children: React.ReactNode, 
-  usageCode: string 
+  children,
+  usageCode,
+  sourceCode,
+}: {
+  name: string;
+  componentName: string;
+  children: React.ReactNode;
+  usageCode: string;
+  sourceCode?: string;
 }) {
-  const filePath = findComponentFile(componentName);
-  let sourceCode = '';
-  
-  if (filePath) {
-    try {
-      sourceCode = fs.readFileSync(filePath, 'utf8');
-    } catch (e) {
-      sourceCode = '// Error reading source code for ' + componentName;
-    }
-  } else {
-    sourceCode = '// Source code not found for ' + componentName;
-  }
-
   return (
-    <ComponentShowcaseClient 
-      name={name} 
+    <ComponentShowcaseClient
+      name={name}
       componentName={componentName}
-      sourceCode={sourceCode} 
+      sourceCode={
+        sourceCode ??
+        getComponentSource(componentName) ??
+        getFallbackSourceCode(componentName)
+      }
       usageCode={usageCode}
     >
       {children}

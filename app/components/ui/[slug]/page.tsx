@@ -2,6 +2,8 @@ import { UiComponentDocsTemplate } from "@/components/blocks/UiComponentDocsTemp
 import { getUiComponentDoc } from "@/lib/ui-docs";
 import { notFound } from "next/navigation";
 
+export const runtime = "edge";
+
 export default async function UiComponentDocsPage({
   params,
 }: {

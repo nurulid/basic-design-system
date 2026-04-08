@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "generate:component-source": "node scripts/generate-component-source.mjs",
+    "dev": "node scripts/generate-component-source.mjs && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "npx @cloudflare/next-on-pages"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
