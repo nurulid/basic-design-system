@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "npx @cloudflare/next-on-pages"
+    "deploy": "cloudflare-next-build && wrangler deploy"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -20,6 +20,7 @@
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.18.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
