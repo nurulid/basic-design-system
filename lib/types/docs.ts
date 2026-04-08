@@ -1,5 +1,10 @@
-import type { DocsPropsRow } from "@/components/blocks/DocsPagePrimitives";
 import type { ReactNode } from "react";
+
+export type DocsPropsRow = {
+  name: string;
+  type: string;
+  description: string;
+};
 
 export type UiDocGuideline = {
   title: string;

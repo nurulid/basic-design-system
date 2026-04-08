@@ -1,10 +1,5 @@
 import type { ReactNode } from "react";
-
-export type DocsPropsRow = {
-  name: string;
-  type: string;
-  description: string;
-};
+import type { DocsPropsRow } from "@/lib/types";
 
 export function DocsPage({
   title,

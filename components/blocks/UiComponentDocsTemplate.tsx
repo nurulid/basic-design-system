@@ -7,7 +7,7 @@ import {
   DocsPropsApiTable,
   DocsRelatedComponents,
 } from "@/components/blocks/DocsPagePrimitives";
-import type { UiComponentDoc } from "@/lib/ui-docs/types";
+import type { UiComponentDoc } from "@/lib/types";
 
 export function UiComponentDocsTemplate({ doc }: { doc: UiComponentDoc }) {
   return (

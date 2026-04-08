@@ -1,4 +1,4 @@
-import type { UiComponentDoc } from "@/lib/ui-docs/types";
+import type { UiComponentDoc } from "@/lib/types";
 import * as UsageCodesUI from "@/components/examples/UsageCodesUI";
 import { Button } from "@/components/ui/Button";
 import { Upload, CheckCircle2, Lightbulb, ShieldCheck } from "lucide-react";
