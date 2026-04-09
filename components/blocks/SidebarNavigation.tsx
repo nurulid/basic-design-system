@@ -118,7 +118,7 @@ export function SidebarNavigation({
             {normalizedItems.map((item) => {
               const isPathLink = item.href.startsWith("/");
               const isActive = isPathLink
-                ? pathname === item.href
+                ? pathname === item.href || pathname.startsWith(`${item.href}/`)
                 : activeId === item.sectionId;
 
               const itemClassName = cn(
