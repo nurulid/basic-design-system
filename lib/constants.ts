@@ -17,7 +17,7 @@ export const componentsNavigation: SidebarNavigationItem[] = [
   { href: "/components/interactions", label: "Interactions" },
 ];
 
-const componentDocsSection: SidebarNavigationItem[] = [
+export const componentDocsSection: SidebarNavigationItem[] = [
   { label: "Overview", href: "#overview" },
   { label: "Preview", href: "#preview" },
   { label: "Guidelines", href: "#guidelines" },

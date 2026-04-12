@@ -7,7 +7,7 @@ import React from "react";
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarLayout>
-      <div className="space-y-2">
+      <div className="space-y-2 sticky top-28 self-start">
         <SidebarNavigation title="components" items={componentsNavigation} />
         <ContextualComponentsSidebar />
       </div>
