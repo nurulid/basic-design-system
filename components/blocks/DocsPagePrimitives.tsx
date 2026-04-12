@@ -57,30 +57,43 @@ export function DocsFactCard({
 }
 
 export function DocsGuidelinesGrid({ children }: { children: ReactNode }) {
-  return <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">{children}</div>;
+  return <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">{children}</div>;
 }
 
 export function DocsPropsApiTable({ rows }: { rows: DocsPropsRow[] }) {
   return (
     <div className="overflow-hidden rounded-3xl border border-system-border bg-system-card shadow-[--shadow-diffuse]">
-      <table className="w-full text-left">
-        <thead className="bg-system-soft text-sm text-system-heading">
-          <tr>
-            <th className="px-5 py-4 font-semibold">Name</th>
-            <th className="px-5 py-4 font-semibold">Type</th>
-            <th className="px-5 py-4 font-semibold">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row) => (
-            <tr key={row.name} className="border-t border-system-border text-sm">
-              <td className="px-5 py-4 font-mono text-system-heading">{row.name}</td>
-              <td className="px-5 py-4 font-mono text-system-text">{row.type}</td>
-              <td className="px-5 py-4 text-system-text">{row.description}</td>
+      <div className="overflow-x-auto">
+        <table className="min-w-full table-fixed text-left">
+          <colgroup>
+            <col className="w-[25%]" />
+            <col className="w-[45%]" />
+            <col className="w-[35%]" />
+          </colgroup>
+          <thead className="bg-system-soft text-sm text-system-heading">
+            <tr>
+              <th className="px-5 py-4 font-semibold">Name</th>
+              <th className="px-5 py-4 font-semibold">Type</th>
+              <th className="px-5 py-4 font-semibold">Description</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {rows.map((row) => (
+              <tr key={row.name} className="border-t border-system-border text-sm">
+                <td className="align-top px-5 py-4 font-mono text-system-heading wrap-break-word">
+                  {row.name}
+                </td>
+                <td className="align-top px-5 py-4 font-mono text-system-text whitespace-normal wrap-anywhere">
+                  {row.type}
+                </td>
+                <td className="align-top px-5 py-4 text-system-text wrap-break-word">
+                  {row.description}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
