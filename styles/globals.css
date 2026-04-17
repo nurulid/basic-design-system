@@ -83,6 +83,16 @@
     letter-spacing: -0.02em;
   }
 
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .list-dot {
+    @apply list-disc pl-5 *:leading-normal text-system-text;
+  }
+
   .page-shell {
     position: relative;
     isolation: isolate;
