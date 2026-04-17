@@ -2,6 +2,12 @@ import type { UiComponentDoc } from "@/lib/types";
 import * as UsageCodesUI from "@/components/examples/UsageCodesUI";
 import { Button } from "@/components/ui/Button";
 import { Upload, CheckCircle2, Lightbulb, ShieldCheck } from "lucide-react";
+import { 
+  DoButtonHierarchy, 
+  DoButtonLoading, 
+  DontButtonHierarchy, 
+  DontButtonLoading 
+} from "@/components/blocks/BestPracticesPreviews";
 
 export const buttonDoc: UiComponentDoc = {
   title: "Button",
@@ -37,7 +43,7 @@ export const buttonDoc: UiComponentDoc = {
       title: "Features",
       icon: <CheckCircle2 className="h-5 w-5" />,
       content: (
-        <ul className="space-y-2">
+        <ul className="space-y-2 list-dot">
           <li>Keyboard support with Enter and Space.</li>
           <li>Accessible labels and semantic button roles.</li>
           <li>Visual states for hover, focus, active, and disabled.</li>
@@ -58,6 +64,53 @@ export const buttonDoc: UiComponentDoc = {
         "Ensure visible focus styles, adequate color contrast, and descriptive text labels. Avoid icon-only labels unless an accessible name is provided.",
     },
   ],
+  dosAndDonts: {
+    dos: [
+      {
+        title: "Use Clear Action Labels",
+        description: "Use verbs like 'Save', 'Send', or 'Delete' so the action is immediately understood.",
+      },
+      {
+        title: "Keep Visual Hierarchy",
+        description: "Use Primary for the main action and Ghost or Outline for secondary actions.",
+        preview: <DoButtonHierarchy />,
+      },
+      {
+        title: "Show Clear States",
+        description: "Provide visual feedback, such as a loading state, while a process is running.",
+        preview: <DoButtonLoading />,
+      },
+      {
+        title: "Use Comfortable Sizing",
+        description: "Make buttons easy to tap or click with at least a 44px hit area.",
+      },
+    ],
+    donts: [
+      {
+        title: "Use Ambiguous Labels",
+        description: "Avoid labels like 'OK' or 'Yes' that do not explain the result of the action.",
+      },
+      {
+        title: "Overuse Primary Actions",
+        description: "Do not place two Primary buttons side by side because it makes the priority unclear.",
+        preview: <DontButtonHierarchy />,
+      },
+      {
+        title: "Leave Users Without Feedback",
+        description: "Do not let a button appear ready while the system is still processing.",
+        preview: <DontButtonLoading />,
+      },
+      {
+        title: "Write Overlong Labels",
+        description: "Keep labels concise if they grow beyond two words.",
+      },
+      {
+        title: "Use Red Without Meaning",
+        description: "Reserve red for destructive actions that cannot be easily undone.",
+        dangerous: true,
+      },
+    ],
+  },
   propsRows: [
     {
       name: "variant",
