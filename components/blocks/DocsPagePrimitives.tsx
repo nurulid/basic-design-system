@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { CheckCircle2, XCircle, AlertTriangle } from "lucide-react";
 import type { DocsPropsRow } from "@/lib/types";
 
 export function DocsPage({
@@ -110,5 +111,126 @@ export function DocsRelatedComponents({ items }: { items: string[] }) {
         </span>
       ))}
     </div>
+  );
+}
+
+export function DocsDosAndDontsSection({ title = "Best Practices", children }: { title?: string, children: ReactNode }) {
+  return (
+    <section id="best-practices" className="space-y-6 pt-4">
+      <h2 className="mb-4 flex items-center gap-2 text-2xl font-semibold tracking-tight text-system-heading lg:mb-6">
+        {title}
+      </h2>
+      {children}
+    </section>
+  );
+}
+
+function DocsDosAndDontsColumnTitle({
+  label,
+  tone,
+}: {
+  label: string;
+  tone: "do" | "dont";
+}) {
+  const toneClassName =
+    tone === "do"
+      ? "border-green-200 bg-green-50 text-green-900 dark:border-green-900/50 dark:bg-green-950/30 dark:text-green-100"
+      : "border-rose-200 bg-rose-50 text-rose-900 dark:border-rose-900/50 dark:bg-rose-950/30 dark:text-rose-100";
+
+  return (
+      <div
+        className={`flex items-center justify-center rounded-3xl border p-1 font-semibold tracking-tight shadow-[inset_0_1px_0_rgba(255,255,255,0.4)] ${toneClassName}`}
+      >
+        {label}
+      </div>
+  );
+}
+
+export function DocsDosAndDontsGrid({
+  doChildren,
+  dontChildren,
+}: {
+  doChildren: ReactNode;
+  dontChildren: ReactNode;
+}) {
+  return (
+    <div className="space-y-4 lg:space-y-6">
+      <div className="sticky top-28 z-20 hidden grid-cols-2 gap-4 lg:grid lg:gap-8">
+        <DocsDosAndDontsColumnTitle label="Do" tone="do" />
+        <DocsDosAndDontsColumnTitle label="Don't" tone="dont" />
+      </div>
+
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
+        <div className="space-y-4">
+          <div className="sticky top-28 z-10 lg:hidden">
+            <DocsDosAndDontsColumnTitle label="Do" tone="do" />
+          </div>
+          {doChildren}
+        </div>
+
+        <div className="space-y-4">
+          <div className="sticky top-28 z-10 lg:hidden">
+            <DocsDosAndDontsColumnTitle label="Don't" tone="dont" />
+          </div>
+          {dontChildren}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function DocsDoCard({ title, description, children }: { title: string, description: string, children?: ReactNode }) {
+  return (
+    <div className="rounded-3xl border border-green-200 dark:border-green-900/50 px-6 py-6 space-y-4">
+      {children && (
+        <div className="flex items-center justify-center py-8 bg-green-100/30 dark:bg-green-900/20 rounded-2xl border border-green-200/50 dark:border-green-900/30">
+          {children}
+        </div>
+      )}
+      <div className="flex gap-3">
+        <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+        <div className="space-y-1">
+          <p className="text-sm font-semibold text-green-900 dark:text-green-100">{title}</p>
+          <p className="text-sm leading-relaxed text-green-800/80 dark:text-green-200/60">{description}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function DocsDontCard({ title, description, children, dangerous }: { title: string, description: string, children?: ReactNode, dangerous?: boolean }) {
+  return (
+    <div className={`rounded-3xl border px-6 py-6 space-y-4
+      ${dangerous ? "border-red-200 dark:border-red-900/50" : "border-rose-200 dark:border-rose-900/50"}`}>
+      {children && (
+        <div className={`flex items-center justify-center py-8 rounded-2xl border 
+          ${dangerous ? "bg-red-100/30 dark:bg-red-900/20 border-red-200/50 dark:border-red-900/30" : "bg-rose-100/30 dark:bg-rose-900/20 border-rose-200/50 dark:border-rose-900/30"}`}>
+          {children}
+        </div>
+      )}
+      <div className="flex gap-3">
+        {dangerous ? (
+          <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5 text-red-600" />
+        ) : (
+          <XCircle className="w-5 h-5 shrink-0 mt-0.5 text-rose-600" />
+        )}
+        <div className="space-y-1">
+          <p className={`text-sm font-semibold ${dangerous ? "text-red-900 dark:text-red-100" : "text-rose-900 dark:text-rose-100"}`}>
+             {title}
+          </p>
+          <p className={`text-sm leading-relaxed ${dangerous ? "text-red-800/80 dark:text-red-200/60" : "text-rose-800/80 dark:text-rose-200/60"}`}>
+            {description}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function DocsSubHeading({ children }: { children: ReactNode }) {
+  return (
+    <span className="block mt-6 mb-2 font-medium tracking-widest text-xs uppercase text-system-text/60">
+      {children}
+    </span>
   );
 }

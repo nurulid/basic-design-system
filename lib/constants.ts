@@ -21,6 +21,7 @@ export const componentDocsSection: SidebarNavigationItem[] = [
   { label: "Overview", href: "#overview" },
   { label: "Preview", href: "#preview" },
   { label: "Guidelines", href: "#guidelines" },
+  { label: "Best Practices", href: "#best-practices" },
   { label: "Props API", href: "#props-api" },
   { label: "Related", href: "#related" },
 ];

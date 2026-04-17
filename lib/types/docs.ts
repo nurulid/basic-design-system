@@ -12,6 +12,13 @@ export type UiDocGuideline = {
   content: ReactNode;
 };
 
+export type DosDontsItem = {
+  title: string;
+  description: string;
+  preview?: ReactNode;
+  dangerous?: boolean;
+};
+
 export type UiComponentDoc = {
   title: string;
   description: string;
@@ -22,6 +29,10 @@ export type UiComponentDoc = {
     preview: ReactNode;
   };
   guidelines: UiDocGuideline[];
+  dosAndDonts?: {
+    dos: DosDontsItem[];
+    donts: DosDontsItem[];
+  };
   propsRows: DocsPropsRow[];
   relatedComponents: string[];
 };

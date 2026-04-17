@@ -6,6 +6,10 @@ import {
   DocsPreviewCanvas,
   DocsPropsApiTable,
   DocsRelatedComponents,
+  DocsDosAndDontsSection,
+  DocsDosAndDontsGrid,
+  DocsDoCard,
+  DocsDontCard,
 } from "@/components/blocks/DocsPagePrimitives";
 import type { UiComponentDoc } from "@/lib/types";
 
@@ -31,6 +35,28 @@ export function UiComponentDocsTemplate({ doc }: { doc: UiComponentDoc }) {
           ))}
         </DocsGuidelinesGrid>
       </section>
+
+      {doc.dosAndDonts && (
+        <DocsDosAndDontsSection>
+          <DocsDosAndDontsGrid
+            doChildren={doc.dosAndDonts.dos.map((item, idx) => (
+              <DocsDoCard key={idx} title={item.title} description={item.description}>
+                {item.preview}
+              </DocsDoCard>
+            ))}
+            dontChildren={doc.dosAndDonts.donts.map((item, idx) => (
+              <DocsDontCard
+                key={idx}
+                title={item.title}
+                description={item.description}
+                dangerous={item.dangerous}
+              >
+                {item.preview}
+              </DocsDontCard>
+            ))}
+          />
+        </DocsDosAndDontsSection>
+      )}
 
       <section id="props-api" className="space-y-4">
         <h2 className="text-3xl font-semibold tracking-tight text-system-heading">Props API</h2>
