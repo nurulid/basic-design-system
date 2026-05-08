@@ -29,7 +29,7 @@ export const componentDocsSection: SidebarNavigationItem[] = [
 const uiComponentsList: SidebarNavigationItem[] = [
   { label: "Button", href: "/components/ui/button" },
   { label: "Input", href: "/components/ui/input" },
-  { label: "Select", href: "/components/ui/select" },
+  { label: "Textarea", href: "/components/ui/textarea" },
 ];
 
 const blocksComponentsList: SidebarNavigationItem[] = [
