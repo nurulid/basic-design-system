@@ -28,6 +28,7 @@ export const componentDocsSection: SidebarNavigationItem[] = [
 
 const uiComponentsList: SidebarNavigationItem[] = [
   { label: "Button", href: "/components/ui/button" },
+  { label: "Checkbox", href: "/components/ui/checkbox" },
   { label: "Input", href: "/components/ui/input" },
   { label: "Textarea", href: "/components/ui/textarea" },
 ];
