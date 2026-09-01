@@ -3,6 +3,7 @@ import { checkboxDoc } from "@/lib/ui-docs/checkbox";
 import { inputDoc } from "@/lib/ui-docs/input";
 import { radioDoc } from "@/lib/ui-docs/radio";
 import { switchDoc } from "@/lib/ui-docs/switch";
+import { selectDoc } from "@/lib/ui-docs/select";
 import type { UiComponentDoc } from "@/lib/types";
 import { textareaDoc } from "./textarea";
 
@@ -12,6 +13,7 @@ export const uiComponentDocsBySlug: Record<string, UiComponentDoc> = {
   input: inputDoc,
   radio: radioDoc,
   switch: switchDoc,
+  select: selectDoc,
   textarea: textareaDoc,
 };
 
