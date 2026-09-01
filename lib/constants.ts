@@ -31,6 +31,7 @@ const uiComponentsList: SidebarNavigationItem[] = [
   { label: "Checkbox", href: "/components/ui/checkbox" },
   { label: "Input", href: "/components/ui/input" },
   { label: "Radio", href: "/components/ui/radio" },
+  { label: "Switch", href: "/components/ui/switch" },
   { label: "Textarea", href: "/components/ui/textarea" },
 ];
 

@@ -3,7 +3,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
-interface SwitchProps extends Omit<
+export interface SwitchProps extends Omit<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   "onChange"
 > {
@@ -13,9 +13,19 @@ interface SwitchProps extends Omit<
 }
 
 const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
-  ({ className, checked, defaultChecked, onCheckedChange, ...props }, ref) => {
+  (
+    {
+      className,
+      checked,
+      defaultChecked,
+      onCheckedChange,
+      onClick,
+      ...props
+    },
+    ref,
+  ) => {
     const [isInternalChecked, setIsInternalChecked] = React.useState(
-      defaultChecked || false,
+      defaultChecked ?? false,
     );
     const isControlled = checked !== undefined;
     const isChecked = isControlled ? checked : isInternalChecked;
@@ -27,7 +37,7 @@ const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
         setIsInternalChecked(newValue);
       }
       onCheckedChange?.(newValue);
-      props.onClick?.(e);
+      onClick?.(e);
     };
 
     return (
