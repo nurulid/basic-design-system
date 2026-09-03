@@ -1,4 +1,4 @@
-export const cardUsage = `import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/Card";
+export const cardUsage = `import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/blocks/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 

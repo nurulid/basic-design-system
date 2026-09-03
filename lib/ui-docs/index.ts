@@ -1,4 +1,5 @@
 import { buttonDoc } from "@/lib/ui-docs/button";
+import { cardDoc } from "@/lib/ui-docs/card";
 import { checkboxDoc } from "@/lib/ui-docs/checkbox";
 import { inputDoc } from "@/lib/ui-docs/input";
 import { radioDoc } from "@/lib/ui-docs/radio";
@@ -17,8 +18,16 @@ export const uiComponentDocsBySlug: Record<string, UiComponentDoc> = {
   textarea: textareaDoc,
 };
 
+export const blockComponentDocsBySlug: Record<string, UiComponentDoc> = {
+  card: cardDoc,
+};
+
 export function getUiComponentDoc(slug: string) {
   return uiComponentDocsBySlug[slug];
+}
+
+export function getBlockComponentDoc(slug: string) {
+  return blockComponentDocsBySlug[slug];
 }
 
 export type { UiComponentDoc } from "@/lib/types";
