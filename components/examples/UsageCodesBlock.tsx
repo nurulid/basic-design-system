@@ -46,6 +46,17 @@ export default function App() {
   );
 }`;
 
+export const tooltipUsage = `import { Tooltip } from "@/components/blocks/Tooltip";
+import { Button } from "@/components/ui/Button";
+
+export default function App() {
+  return (
+    <Tooltip content="Save your current changes">
+      <Button>Save</Button>
+    </Tooltip>
+  );
+}`;
+
 export const tabsUsage = `import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/Tabs";
 
 export default function App() {
