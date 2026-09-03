@@ -20,6 +20,32 @@ export default function App() {
   );
 }`;
 
+export const accordionUsage = `import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/blocks/Accordion";
+
+export default function App() {
+  return (
+    <Accordion type="single" defaultValue="item-1">
+      <AccordionItem value="item-1">
+        <AccordionTrigger>What is an accordion?</AccordionTrigger>
+        <AccordionContent>
+          It reveals and hides related content in the current context.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Can multiple items be open?</AccordionTrigger>
+        <AccordionContent>
+          Yes. Set type to multiple and pass an array of values.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
+  );
+}`;
+
 export const tabsUsage = `import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/Tabs";
 
 export default function App() {

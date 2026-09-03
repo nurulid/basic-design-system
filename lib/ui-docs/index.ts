@@ -7,6 +7,7 @@ import { switchDoc } from "@/lib/ui-docs/switch";
 import { selectDoc } from "@/lib/ui-docs/select";
 import type { UiComponentDoc } from "@/lib/types";
 import { textareaDoc } from "./textarea";
+import { accordionDoc } from "./accordion";
 
 export const uiComponentDocsBySlug: Record<string, UiComponentDoc> = {
   button: buttonDoc,
@@ -19,6 +20,7 @@ export const uiComponentDocsBySlug: Record<string, UiComponentDoc> = {
 };
 
 export const blockComponentDocsBySlug: Record<string, UiComponentDoc> = {
+  accordion: accordionDoc,
   card: cardDoc,
 };
 
