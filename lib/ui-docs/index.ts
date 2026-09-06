@@ -9,6 +9,7 @@ import type { UiComponentDoc } from "@/lib/types";
 import { textareaDoc } from "./textarea";
 import { accordionDoc } from "./accordion";
 import { tooltipDoc } from "./tooltip";
+import { avatarDoc } from "./avatar";
 
 export const uiComponentDocsBySlug: Record<string, UiComponentDoc> = {
   button: buttonDoc,
@@ -24,6 +25,7 @@ export const blockComponentDocsBySlug: Record<string, UiComponentDoc> = {
   accordion: accordionDoc,
   card: cardDoc,
   tooltip: tooltipDoc,
+  avatar: avatarDoc,
 };
 
 export function getUiComponentDoc(slug: string) {

@@ -57,6 +57,18 @@ export default function App() {
   );
 }`;
 
+export const avatarUsage = `import { Avatar } from "@/components/blocks/Avatar";
+
+export default function App() {
+  return (
+    <div className="flex items-center gap-4">
+      <Avatar src="/avatar-demo.svg" alt="Alex Morgan" />
+      <Avatar fallback="Alex Morgan" aria-label="Alex Morgan" size="sm" />
+      <Avatar aria-label="Unknown user" size="lg" />
+    </div>
+  );
+}`;
+
 export const tabsUsage = `import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/Tabs";
 
 export default function App() {
