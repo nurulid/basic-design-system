@@ -10,6 +10,7 @@ import { textareaDoc } from "./textarea";
 import { accordionDoc } from "./accordion";
 import { tooltipDoc } from "./tooltip";
 import { avatarDoc } from "./avatar";
+import { modalDoc } from "./modal";
 
 export const uiComponentDocsBySlug: Record<string, UiComponentDoc> = {
   button: buttonDoc,
@@ -26,6 +27,7 @@ export const blockComponentDocsBySlug: Record<string, UiComponentDoc> = {
   card: cardDoc,
   tooltip: tooltipDoc,
   avatar: avatarDoc,
+  modal: modalDoc,
 };
 
 export function getUiComponentDoc(slug: string) {
