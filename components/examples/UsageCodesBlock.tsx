@@ -91,6 +91,23 @@ export default function App() {
   );
 }`;
 
+export const progressUsage = `import { Progress } from "@/components/blocks/Progress";
+
+export default function App() {
+  return (
+    <div className="space-y-6">
+      <Progress value={65} aria-label="Uploading files: 65 percent" />
+      <Progress indeterminate aria-label="Preparing workspace" />
+      <Progress
+        variant="circular"
+        value={80}
+        color="success"
+        aria-label="Syncing data: 80 percent"
+      />
+    </div>
+  );
+}`;
+
 export const avatarUsage = `import { Avatar } from "@/components/blocks/Avatar";
 
 export default function App() {

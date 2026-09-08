@@ -41,6 +41,7 @@ const blocksComponentsList: SidebarNavigationItem[] = [
   { label: "Avatar", href: "/components/blocks/avatar" },
   { label: "Card", href: "/components/blocks/card" },
   { label: "Modal", href: "/components/blocks/modal" },
+  { label: "Progress", href: "/components/blocks/progress" },
   { label: "Sidebar", href: "/components/blocks/sidebar" },
   { label: "Tooltip", href: "/components/blocks/tooltip" },
 ];

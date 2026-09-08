@@ -11,6 +11,7 @@ import { accordionDoc } from "./accordion";
 import { tooltipDoc } from "./tooltip";
 import { avatarDoc } from "./avatar";
 import { modalDoc } from "./modal";
+import { progressDoc } from "./progress";
 
 export const uiComponentDocsBySlug: Record<string, UiComponentDoc> = {
   button: buttonDoc,
@@ -28,6 +29,7 @@ export const blockComponentDocsBySlug: Record<string, UiComponentDoc> = {
   tooltip: tooltipDoc,
   avatar: avatarDoc,
   modal: modalDoc,
+  progress: progressDoc,
 };
 
 export function getUiComponentDoc(slug: string) {
