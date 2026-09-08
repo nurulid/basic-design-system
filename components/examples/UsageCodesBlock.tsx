@@ -108,6 +108,25 @@ export default function App() {
   );
 }`;
 
+export const alertUsage = `import { Alert } from "@/components/blocks/Alert";
+
+export default function App() {
+  return (
+    <div className="space-y-4">
+      <Alert title="Workspace saved" variant="success">
+        Your changes are now available to your team.
+      </Alert>
+      <Alert title="Connection issue" variant="warning">
+        We could not sync the latest updates. Check your connection and try again.
+      </Alert>
+      <Alert variant="info">Scheduled maintenance starts at 10:00 PM.</Alert>
+      <Alert title="Unable to save" variant="error">
+        Your changes could not be saved. Review the form and try again.
+      </Alert>
+    </div>
+  );
+}`;
+
 export const avatarUsage = `import { Avatar } from "@/components/blocks/Avatar";
 
 export default function App() {
