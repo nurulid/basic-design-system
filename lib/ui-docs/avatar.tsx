@@ -1,6 +1,6 @@
 import type { UiComponentDoc } from "@/lib/types";
 import * as UsageCodesBlock from "@/components/examples/UsageCodesBlock";
-import { Avatar } from "@/components/blocks/Avatar";
+import { Avatar } from "@/components/patterns/Avatar";
 import { CheckCircle2, Lightbulb, ShieldCheck } from "lucide-react";
 
 export const avatarDoc: UiComponentDoc = {

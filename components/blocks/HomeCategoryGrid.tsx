@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-} from "@/components/blocks/Card";
+} from "@/components/patterns/Card";
 
 const categories = [
   {

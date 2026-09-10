@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Card } from "@/components/blocks/Card";
+import { Card } from "@/components/patterns/Card";
 import { buttonVariants } from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
 

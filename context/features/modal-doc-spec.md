@@ -92,7 +92,7 @@ Required `propsRows` items:
   - Content rendered in the modal body, including forms, messages, and
     actions.
 
-Implementation requirements for `components/blocks/Modal.tsx`:
+Implementation requirements for `components/patterns/Modal.tsx`:
 
 - Keep the component client-side because it owns DOM event listeners, focus,
   and document scroll state.
@@ -131,7 +131,7 @@ Integration requirements:
 - Add a reusable Modal usage snippet in the appropriate usage-code module and
   reference it from the docs entry.
 - Ensure the docs entry's `componentName` allows the generated source preview
-  registry to resolve `components/blocks/Modal.tsx`.
+  registry to resolve `components/patterns/Modal.tsx`.
 - Run `npm run generate:component-source` after changing docs source
   references; never edit `lib/component-source.ts` manually.
 - Keep the implementation and docs type-safe and aligned with the actual
@@ -143,7 +143,7 @@ Integration requirements:
   tone.
 - `lib/ui-docs/card.tsx` — reference block documentation entry.
 - `lib/types/docs.ts` — `UiComponentDoc` and props-table types.
-- `components/blocks/Modal.tsx` — source of truth for the Modal API and visual
+- `components/patterns/Modal.tsx` — source of truth for the Modal API and visual
   structure.
 - `components/blocks/UiComponentDocsTemplate.tsx` — rendered documentation
   sections.

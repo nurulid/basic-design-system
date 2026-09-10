@@ -23,7 +23,7 @@ The documentation should present a realistic page path, explain the semantic rol
 
 ## References
 
-- `components/blocks/Breadcrumb.tsx`
+- `components/patterns/Breadcrumb.tsx`
 - `lib/ui-docs/button.tsx`
 - `components/examples/UsageCodesBlock.tsx`
 - `components/blocks/UiComponentDocsTemplate.tsx`
@@ -31,6 +31,6 @@ The documentation should present a realistic page path, explain the semantic rol
 
 ## Notes
 
-- Keep the component source in `components/blocks/Breadcrumb.tsx`; do not edit generated `lib/component-source.ts` by hand.
+- Keep the component source in `components/patterns/Breadcrumb.tsx`; do not edit generated `lib/component-source.ts` by hand.
 - Add the documentation data to `lib/ui-docs/breadcrumb.tsx` and register it in `lib/ui-docs/index.ts`.
 - Regenerate the component source registry after adding the `componentName: "Breadcrumb"` documentation entry.

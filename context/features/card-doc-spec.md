@@ -95,7 +95,7 @@ Required `relatedComponents`:
 
 ## References
 - Use `lib/ui-docs/button.tsx` as the completeness and formatting reference.
-- Use `components/blocks/Card.tsx` as the source of truth for the Card API and
+- Use `components/patterns/Card.tsx` as the source of truth for the Card API and
   default composition styles.
 - Use `components/examples/UsageCodesBlock.tsx` and
   `app/components/blocks/page.tsx` as references for the current Card

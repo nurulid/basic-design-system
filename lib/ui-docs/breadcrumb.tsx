@@ -7,7 +7,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/blocks/Breadcrumb";
+} from "@/components/patterns/Breadcrumb";
 import { CheckCircle2, Lightbulb, ShieldCheck } from "lucide-react";
 
 export const breadcrumbDoc: UiComponentDoc = {

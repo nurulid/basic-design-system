@@ -256,7 +256,7 @@ The homepage work should be considered complete when all of the following are tr
 - Use `app/page.tsx` as the current homepage baseline.
 - Use `components/layout/DefaultLayout.tsx` and `components/blocks/Navigation.tsx` as the source of truth for the app shell and global navigation context.
 - Use `app/components/ui/page.tsx` and `app/components/blocks/page.tsx` as references for what content already exists deeper in the docs.
-- Use `components/blocks/Card.tsx` and `components/blocks/DocsPagePrimitives.tsx` as references for card styling, preview surfaces, and section composition.
+- Use `components/patterns/Card.tsx` and `components/blocks/DocsPagePrimitives.tsx` as references for card styling, preview surfaces, and section composition.
 - Use `styles/globals.css` as the source of truth for semantic tokens and global surface treatment.
 - Use `lib/constants.ts` to stay aligned with the current docs navigation categories.
 

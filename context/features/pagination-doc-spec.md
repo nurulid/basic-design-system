@@ -33,7 +33,7 @@ ellipsis indicator for omitted page ranges.
 
 ## References
 
-- `components/blocks/Pagination.tsx`
+- `components/patterns/Pagination.tsx`
 - `lib/ui-docs/button.tsx`
 - `components/examples/UsageCodesBlock.tsx`
 - `components/blocks/UiComponentDocsTemplate.tsx`
@@ -41,7 +41,7 @@ ellipsis indicator for omitted page ranges.
 
 ## Notes
 
-- Keep the component source in `components/blocks/Pagination.tsx`; do not edit
+- Keep the component source in `components/patterns/Pagination.tsx`; do not edit
   generated `lib/component-source.ts` by hand.
 - Add the documentation data to `lib/ui-docs/pagination.tsx` and register it
   in `lib/ui-docs/index.ts`.

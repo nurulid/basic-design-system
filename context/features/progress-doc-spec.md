@@ -87,7 +87,7 @@ Required `propsRows` items:
 - `...props`: `React.HTMLAttributes<HTMLDivElement>` — Native div and ARIA
   attributes, including `aria-label`, `id`, and event handlers.
 
-Implementation requirements for `components/blocks/Progress.tsx`:
+Implementation requirements for `components/patterns/Progress.tsx`:
 
 - Keep the component client-compatible and preserve the existing exported
   `Progress`, `ProgressProps`, and `progressVariants` API.
@@ -107,7 +107,7 @@ Integration requirements:
 - Add the completed Progress entry to `lib/ui-docs/index.ts` and expose it in
   the blocks navigation at `/components/blocks/progress`.
 - Ensure `componentName: "Progress"` allows the generated source-preview
-  registry to resolve `components/blocks/Progress.tsx`.
+  registry to resolve `components/patterns/Progress.tsx`.
 - Run `npm run generate:component-source` after changing docs source
   references; never edit `lib/component-source.ts` manually.
 - Keep the documentation and implementation type-safe and aligned with the
@@ -117,7 +117,7 @@ Integration requirements:
 
 - `lib/ui-docs/button.tsx` — reference documentation shape and completeness.
 - `lib/ui-docs/card.tsx` — reference block documentation entry.
-- `components/blocks/Progress.tsx` — source of truth for the Progress API.
+- `components/patterns/Progress.tsx` — source of truth for the Progress API.
 - `components/blocks/UiComponentDocsTemplate.tsx` — rendered documentation
   sections.
 - `components/examples/UsageCodesBlock.tsx` — block usage snippets.

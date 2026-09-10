@@ -1,6 +1,6 @@
 import type { UiComponentDoc } from "@/lib/types";
 import * as UsageCodesBlock from "@/components/examples/UsageCodesBlock";
-import { Alert } from "@/components/blocks/Alert";
+import { Alert } from "@/components/patterns/Alert";
 import { CheckCircle2, Lightbulb, ShieldCheck } from "lucide-react";
 
 export const alertDoc: UiComponentDoc = {

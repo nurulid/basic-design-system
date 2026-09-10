@@ -1,4 +1,4 @@
-export const cardUsage = `import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/blocks/Card";
+export const cardUsage = `import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/patterns/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 
@@ -27,7 +27,7 @@ export const breadcrumbUsage = `import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/blocks/Breadcrumb";
+} from "@/components/patterns/Breadcrumb";
 
 export default function App() {
   return (
@@ -57,7 +57,7 @@ export const paginationUsage = `import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/blocks/Pagination";
+} from "@/components/patterns/Pagination";
 
 export default function App() {
   return (
@@ -91,7 +91,7 @@ export const accordionUsage = `import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/blocks/Accordion";
+} from "@/components/patterns/Accordion";
 
 export default function App() {
   return (
@@ -112,7 +112,7 @@ export default function App() {
   );
 }`;
 
-export const tooltipUsage = `import { Tooltip } from "@/components/blocks/Tooltip";
+export const tooltipUsage = `import { Tooltip } from "@/components/patterns/Tooltip";
 import { Button } from "@/components/ui/Button";
 
 export default function App() {
@@ -126,7 +126,7 @@ export default function App() {
 export const modalUsage = `"use client";
 
 import { useState } from "react";
-import { Modal } from "@/components/blocks/Modal";
+import { Modal } from "@/components/patterns/Modal";
 import { Button } from "@/components/ui/Button";
 
 export default function App() {
@@ -157,7 +157,7 @@ export default function App() {
   );
 }`;
 
-export const progressUsage = `import { Progress } from "@/components/blocks/Progress";
+export const progressUsage = `import { Progress } from "@/components/patterns/Progress";
 
 export default function App() {
   return (
@@ -174,7 +174,7 @@ export default function App() {
   );
 }`;
 
-export const alertUsage = `import { Alert } from "@/components/blocks/Alert";
+export const alertUsage = `import { Alert } from "@/components/patterns/Alert";
 
 export default function App() {
   return (
@@ -193,7 +193,7 @@ export default function App() {
   );
 }`;
 
-export const avatarUsage = `import { Avatar } from "@/components/blocks/Avatar";
+export const avatarUsage = `import { Avatar } from "@/components/patterns/Avatar";
 
 export default function App() {
   return (

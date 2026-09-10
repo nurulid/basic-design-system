@@ -129,7 +129,7 @@ Required `propsRows` items:
   tone.
 - `lib/ui-docs/card.tsx` — reference block documentation entry.
 - `lib/types/docs.ts` — `UiComponentDoc` and props table types.
-- `components/blocks/Tooltip.tsx` — source of truth for the Tooltip API and
+- `components/patterns/Tooltip.tsx` — source of truth for the Tooltip API and
   interaction behavior.
 - `components/blocks/UiComponentDocsTemplate.tsx` — rendered docs sections.
 - `components/blocks/ComponentShowcase.tsx` — showcase and source-preview

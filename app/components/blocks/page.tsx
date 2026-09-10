@@ -9,7 +9,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/blocks/Card";
+} from "@/components/patterns/Card";
 import { Input } from "@/components/ui/Input";
 import { SidebarDemo } from "@/components/examples/SidebarDemo";
 

@@ -11,6 +11,7 @@ const componentSearchDirs = [
   path.join(projectRoot, "components", "ui"),
   path.join(projectRoot, "components", "ai"),
   path.join(projectRoot, "components", "blocks"),
+  path.join(projectRoot, "components", "patterns"),
   path.join(projectRoot, "components", "examples"),
 ];
 const componentNamePatterns = [

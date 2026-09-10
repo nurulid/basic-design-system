@@ -1,6 +1,6 @@
 import type { UiComponentDoc } from "@/lib/types";
 import * as UsageCodesBlock from "@/components/examples/UsageCodesBlock";
-import { Progress } from "@/components/blocks/Progress";
+import { Progress } from "@/components/patterns/Progress";
 import { CheckCircle2, Lightbulb, ShieldCheck } from "lucide-react";
 
 export const progressDoc: UiComponentDoc = {

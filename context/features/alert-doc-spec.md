@@ -100,10 +100,10 @@ Implementation and integration requirements:
 - Preserve the current live-region behavior: `warning` and `error` are
   assertive alerts, while `info` and `success` are polite status messages.
 - Do not invent dismiss, action, loading, timeout, or callback props that are
-  not present in `components/blocks/Alert.tsx`.
+  not present in `components/patterns/Alert.tsx`.
 - If the component is added to the docs registry, add it to the blocks
   navigation and include a reusable usage snippet so the generated
-  source-preview registry can resolve `components/blocks/Alert.tsx`.
+  source-preview registry can resolve `components/patterns/Alert.tsx`.
 - Run `npm run generate:component-source` after changing docs source
   references; never edit `lib/component-source.ts` manually.
 
@@ -112,7 +112,7 @@ Implementation and integration requirements:
 - `lib/ui-docs/button.tsx` — reference documentation shape, completeness, and
   tone.
 - `lib/types/docs.ts` — `UiComponentDoc` and props table types.
-- `components/blocks/Alert.tsx` — source of truth for the Alert API, variants,
+- `components/patterns/Alert.tsx` — source of truth for the Alert API, variants,
   icons, and live-region behavior.
 - `components/blocks/UiComponentDocsTemplate.tsx` — rendered documentation
   sections.

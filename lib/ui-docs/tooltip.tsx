@@ -1,6 +1,6 @@
 import type { UiComponentDoc } from "@/lib/types";
 import * as UsageCodesBlock from "@/components/examples/UsageCodesBlock";
-import { Tooltip } from "@/components/blocks/Tooltip";
+import { Tooltip } from "@/components/patterns/Tooltip";
 import { Button } from "@/components/ui/Button";
 import { CheckCircle2, Lightbulb, ShieldCheck } from "lucide-react";
 

@@ -118,7 +118,7 @@ Required `relatedComponents`:
 - `lib/ui-docs/button.tsx` — reference documentation shape, completeness, and
   tone.
 - `lib/types/docs.ts` — `UiComponentDoc` and props table types.
-- `components/blocks/Avatar.tsx` — source of truth for the Avatar API,
+- `components/patterns/Avatar.tsx` — source of truth for the Avatar API,
   fallback states, sizes, and image-loading behavior.
 - `components/blocks/UiComponentDocsTemplate.tsx` — rendered documentation
   sections.

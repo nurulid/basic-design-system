@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Modal } from "@/components/blocks/Modal";
+import { Modal } from "@/components/patterns/Modal";
 import { Button } from "@/components/ui/Button";
 
 export function ModalDemo() {

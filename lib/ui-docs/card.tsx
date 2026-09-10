@@ -7,7 +7,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/blocks/Card";
+} from "@/components/patterns/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { CheckCircle2, Lightbulb, ShieldCheck } from "lucide-react";

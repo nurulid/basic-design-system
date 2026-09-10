@@ -39,7 +39,7 @@ native button behavior.
 - `lib/ui-docs/card.tsx` — reference block documentation entry.
 - `lib/types/docs.ts` — `UiComponentDoc` and props table types.
 - `components/blocks/UiComponentDocsTemplate.tsx` — rendered docs sections.
-- `components/blocks/Accordion.tsx` — Accordion implementation and public API.
+- `components/patterns/Accordion.tsx` — Accordion implementation and public API.
 - `components/examples/UsageCodesBlock.tsx` — block usage snippets.
 - `lib/constants.ts` — block navigation and docs section navigation.
 

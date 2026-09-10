@@ -8,7 +8,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/blocks/Pagination";
+} from "@/components/patterns/Pagination";
 import { CheckCircle2, Lightbulb, ShieldCheck } from "lucide-react";
 
 export const paginationDoc: UiComponentDoc = {

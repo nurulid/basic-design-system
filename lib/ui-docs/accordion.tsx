@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/blocks/Accordion";
+} from "@/components/patterns/Accordion";
 import { CheckCircle2, Lightbulb, ShieldCheck } from "lucide-react";
 
 export const accordionDoc: UiComponentDoc = {
