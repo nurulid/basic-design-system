@@ -16,6 +16,7 @@ import { alertDoc } from "./alert";
 import { breadcrumbDoc } from "./breadcrumb";
 import { paginationDoc } from "./pagination";
 import { tabsDoc } from "./tabs";
+import { badgeDoc } from "./badge";
 
 export const uiComponentDocsBySlug: Record<string, UiComponentDoc> = {
   button: buttonDoc,
@@ -29,6 +30,7 @@ export const uiComponentDocsBySlug: Record<string, UiComponentDoc> = {
 };
 
 export const blockComponentDocsBySlug: Record<string, UiComponentDoc> = {
+  badge: badgeDoc,
   accordion: accordionDoc,
   card: cardDoc,
   tooltip: tooltipDoc,

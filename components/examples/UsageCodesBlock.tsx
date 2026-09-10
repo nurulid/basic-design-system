@@ -20,6 +20,22 @@ export default function App() {
   );
 }`;
 
+export const badgeUsage = `import { Badge } from "@/components/patterns/Badge";
+
+export default function App() {
+  return (
+    <div className="flex flex-wrap items-center gap-3">
+      <Badge>Default</Badge>
+      <Badge variant="secondary">Secondary</Badge>
+      <Badge variant="destructive">Destructive</Badge>
+      <Badge variant="outline">Outline</Badge>
+      <Badge variant="success">Success</Badge>
+      <Badge variant="warning">Warning</Badge>
+      <Badge variant="info">Info</Badge>
+    </div>
+  );
+}`;
+
 export const breadcrumbUsage = `import {
   Breadcrumb,
   BreadcrumbItem,

@@ -38,6 +38,7 @@ const uiComponentsList: SidebarNavigationItem[] = [
 ];
 
 const blocksComponentsList: SidebarNavigationItem[] = [
+  { label: "Badge", href: "/components/blocks/badge" },
   { label: "Accordion", href: "/components/blocks/accordion" },
   { label: "Alert", href: "/components/blocks/alert" },
   { label: "Avatar", href: "/components/blocks/avatar" },
