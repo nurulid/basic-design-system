@@ -40,6 +40,7 @@ const blocksComponentsList: SidebarNavigationItem[] = [
   { label: "Accordion", href: "/components/blocks/accordion" },
   { label: "Alert", href: "/components/blocks/alert" },
   { label: "Avatar", href: "/components/blocks/avatar" },
+  { label: "Breadcrumb", href: "/components/blocks/breadcrumb" },
   { label: "Card", href: "/components/blocks/card" },
   { label: "Modal", href: "/components/blocks/modal" },
   { label: "Progress", href: "/components/blocks/progress" },
