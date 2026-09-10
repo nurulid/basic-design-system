@@ -15,6 +15,7 @@ import { progressDoc } from "./progress";
 import { alertDoc } from "./alert";
 import { breadcrumbDoc } from "./breadcrumb";
 import { paginationDoc } from "./pagination";
+import { tabsDoc } from "./tabs";
 
 export const uiComponentDocsBySlug: Record<string, UiComponentDoc> = {
   button: buttonDoc,
@@ -24,6 +25,7 @@ export const uiComponentDocsBySlug: Record<string, UiComponentDoc> = {
   switch: switchDoc,
   select: selectDoc,
   textarea: textareaDoc,
+  tabs: tabsDoc,
 };
 
 export const blockComponentDocsBySlug: Record<string, UiComponentDoc> = {

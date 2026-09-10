@@ -98,3 +98,22 @@ export default function App() {
     </Select>
   );
 }`;
+
+export const tabsUsage = `import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs";
+
+export default function App() {
+  return (
+    <Tabs defaultValue="account" className="w-full">
+      <TabsList className="grid w-full grid-cols-2">
+        <TabsTrigger value="account">Account</TabsTrigger>
+        <TabsTrigger value="password">Password</TabsTrigger>
+      </TabsList>
+      <TabsContent value="account">
+        Manage your account details and preferences.
+      </TabsContent>
+      <TabsContent value="password">
+        Update your password and sign-in settings.
+      </TabsContent>
+    </Tabs>
+  );
+}`;

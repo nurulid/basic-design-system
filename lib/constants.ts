@@ -34,6 +34,7 @@ const uiComponentsList: SidebarNavigationItem[] = [
   { label: "Select", href: "/components/ui/select" },
   { label: "Switch", href: "/components/ui/switch" },
   { label: "Textarea", href: "/components/ui/textarea" },
+  { label: "Tabs", href: "/components/ui/tabs" },
 ];
 
 const blocksComponentsList: SidebarNavigationItem[] = [
