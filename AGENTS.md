@@ -8,15 +8,16 @@ The current visual direction is a semantic design system with named tokens such 
 
 - The homepage at `app/page.tsx` introduces the design system and showcases featured components.
 - The `/components` section is the main docs area and uses a sidebar layout with category navigation.
-- The `components/ui` folder contains the reusable primitives such as `Button`, `Input`, `Textarea`, `Checkbox`, `Radio`, `Switch`, `Select`, and `Tabs`.
-- The `components/blocks` folder contains larger documentation or composition-oriented building blocks such as `Card`, `Sidebar`, docs page primitives, and showcase wrappers.
+- The `components/ui` folder contains low-level reusable primitives such as `Button`, `Input`, `Textarea`, `Checkbox`, `Radio`, `Switch`, `Select`, and `Tabs`.
+- The `components/patterns` folder contains reusable composed UI patterns such as `Accordion`, `Alert`, `Avatar`, `Badge`, `Breadcrumb`, `Card`, `Modal`, `Pagination`, `Progress`, and `Tooltip`.
+- The `components/blocks` folder contains page sections, documentation infrastructure, and layout-oriented compositions such as homepage sections, `Sidebar`, docs page primitives, and showcase wrappers.
 - The `lib/ui-docs` folder defines structured documentation data for component detail pages. The dynamic route `app/components/ui/[slug]/page.tsx` reads from this registry and renders the shared `UiComponentDocsTemplate`.
 - The site includes source code previews for documented components through the generated file `lib/component-source.ts`.
 
 ## Important Architecture Notes
 
 - `lib/component-source.ts` is generated. Do not edit it manually.
-- `scripts/generate-component-source.mjs` scans the app and docs files for `componentName` references, finds the matching component source files, and writes the registry used by `ComponentShowcase`.
+- `scripts/generate-component-source.mjs` scans the app and docs files for `componentName` references, finds the matching component source files in `components/ui`, `components/patterns`, `components/blocks`, and related directories, and writes the registry used by `ComponentShowcase`.
 - `npm run dev` automatically runs the source generator before starting Next.js.
 - Shared floating field styling for `Input` and `Textarea` is centralized in `lib/ui/fieldStyles.ts`. Prefer updating the shared styles there instead of duplicating input/textarea styling in each component.
 - Navigation config for the docs experience lives in `lib/constants.ts`.
@@ -31,6 +32,7 @@ Read the following to get the full context of the project:
 - `app/components/layout.tsx`
 - `app/components/ui/page.tsx`
 - `app/components/ui/[slug]/page.tsx`
+- `components/patterns/Card.tsx`
 - `components/blocks/UiComponentDocsTemplate.tsx`
 - `components/blocks/ComponentShowcase.tsx`
 - `lib/constants.ts`
