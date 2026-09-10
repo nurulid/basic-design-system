@@ -49,6 +49,43 @@ export default function App() {
   );
 }`;
 
+export const paginationUsage = `import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/blocks/Pagination";
+
+export default function App() {
+  return (
+    <Pagination>
+      <PaginationContent>
+        <PaginationItem>
+          <PaginationPrevious href="/projects?page=1" />
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationLink href="/projects?page=1">1</PaginationLink>
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationLink href="/projects?page=2" isActive>2</PaginationLink>
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationLink href="/projects?page=3">3</PaginationLink>
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationEllipsis />
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationNext href="/projects?page=8" />
+        </PaginationItem>
+      </PaginationContent>
+    </Pagination>
+  );
+}`;
+
 export const accordionUsage = `import {
   Accordion,
   AccordionContent,

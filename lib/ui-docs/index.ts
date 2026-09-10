@@ -14,6 +14,7 @@ import { modalDoc } from "./modal";
 import { progressDoc } from "./progress";
 import { alertDoc } from "./alert";
 import { breadcrumbDoc } from "./breadcrumb";
+import { paginationDoc } from "./pagination";
 
 export const uiComponentDocsBySlug: Record<string, UiComponentDoc> = {
   button: buttonDoc,
@@ -34,6 +35,7 @@ export const blockComponentDocsBySlug: Record<string, UiComponentDoc> = {
   progress: progressDoc,
   alert: alertDoc,
   breadcrumb: breadcrumbDoc,
+  pagination: paginationDoc,
 };
 
 export function getUiComponentDoc(slug: string) {
